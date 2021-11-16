@@ -30,7 +30,6 @@ def main():
 
     ek.set_app_key(get_env_variable("EIKON_APP_KEY"))
 
-
     # Add platform firms
     try:        
         screener_exp = 'SCREEN(U(IN(Equity(active,public,primary))), Contains(TR.BusinessSummary,"platform"), CURN=USD)'
@@ -52,7 +51,6 @@ def main():
         print('Firms done')
     except Warning:
         print('Error in firms')
-
 
     # Add financials
     try:
